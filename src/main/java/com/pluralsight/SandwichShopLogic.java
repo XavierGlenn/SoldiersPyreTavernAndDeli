@@ -1,61 +1,289 @@
 package com.pluralsight;
 
+
 public class SandwichShopLogic {
-//Make an array for the options I've got and the prices associated
-    //TODO: make an array of pre-made sandwiches of my choice, dedicated to the theme
-    // note:
-    //  Tiefling's Delight: buffalo. A comforting classic with a little bit of warmth, for the person who wants something different and adventurous.
-    //  Heart of Avernus: cajun. A sandwich that can add warmth to the coldest heart.
-    //  Infernal Resilience: brisket. A tough adventurer needs a sandwich tough enough to give the protein they need to keep going.
-    //  The Forge: italian sausage. When you want a sandwich reminiscent of home.
-    //  Clive's Favorite: spicy vegan patty. Crafted with love, with a warm picnic feel in mind.
 
-    //TODO: Custom Sandwich
-    //Make an array for size: 4, 8, 12
-    //comment: size prices: 5.50, 7.00, 8.50
-    //Make an array for bread: white, wheat, rye, wrap
-    //toasted boolean y/n
+    private String specialtySandwiches;
+    private double specialtyPrices;
+    private int sizeOptions;
+    private String breadOptions;
+    private double sizePrices;
+    private String meatOptions;
+    private double meatPrices;
+    private String extraMeatOptionsLabel;
+    private double extraMeatPrices;
+    private String cheeseOptions;
+    private double cheesePrices;
+    private String extraCheeseOptionsLabel;
+    private double extraCheesePrices;
+    private String toppingsOptions;
+    private double toppingPrice;
+    private String condimentOptions;
+    private double condimentPrices;
+    private String sidesOptions;
+    private double sidesPrices;
+    private String chipsOptions;
+    private double chipsPrices;
+    private String drinksSizes;
+    private String drinksOptions;
+    private double drinksPrices;
+    private String specialRequests;
+    private String applyCoupon;
+    private String diningOptions;
+    boolean toasted;
 
-    //make an array for meat: steak, ham, salami, roast beef, chicken, bacon
-    //comment: meat prices: 1.00, 2.00, 3.00
+    public SandwichShopLogic(double specialtyPrices, String specialtySandwiches, int sizeOptions, String breadOptions, double breadPrices, String meatOptions, double meatPrices, String extraMeatOptionsLabel, String cheeseOptions, double extraMeatPrices, double cheesePrices, String extraCheeseOptionsLabel, double extraCheesePrices, String toppingsOptions, double toppingPrice, String condimentOptions, double condimentPrices, double sidesPrices, String sidesOptions, String chipsOptions, double chipsPrices, String drinksSizes, String drinksOptions, double drinksPrices, String specialRequests, String applyCoupon, String diningOptions, boolean toasted) {
+        this.specialtyPrices = specialtyPrices;
+        this.specialtySandwiches = specialtySandwiches;
+        this.sizeOptions = sizeOptions;
+        this.breadOptions = breadOptions;
+        this.sizePrices = sizePrices;
+        this.meatOptions = meatOptions;
+        this.meatPrices = meatPrices;
+        this.extraMeatOptionsLabel = extraMeatOptionsLabel;
+        this.cheeseOptions = cheeseOptions;
+        this.extraMeatPrices = extraMeatPrices;
+        this.cheesePrices = cheesePrices;
+        this.extraCheeseOptionsLabel = extraCheeseOptionsLabel;
+        this.extraCheesePrices = extraCheesePrices;
+        this.toppingsOptions = toppingsOptions;
+        this.toppingPrice = toppingPrice;
+        this.condimentOptions = condimentOptions;
+        this.condimentPrices = condimentPrices;
+        this.sidesPrices = sidesPrices;
+        this.sidesOptions = sidesOptions;
+        this.chipsOptions = chipsOptions;
+        this.chipsPrices = chipsPrices;
+        this.drinksSizes = drinksSizes;
+        this.drinksOptions = drinksOptions;
+        this.drinksPrices = drinksPrices;
+        this.specialRequests = specialRequests;
+        this.applyCoupon = applyCoupon;
+        this.diningOptions = diningOptions;
+        this.toasted = toasted;
+    }
 
-    //make an array for extra meat, boolean y/n
-    //comment: extra meat prices: .50, 1.00, 1.50
+    public String getSpecialtySandwiches() {
+        return specialtySandwiches;
+    }
 
-    //make an array for cheese: american, provolone, cheddar, swiss
-    //comment: cheese prices: .75, 1.50, 2.25
+    public void setSpecialtySandwiches(String specialtySandwiches) {
+        this.specialtySandwiches = specialtySandwiches;
+    }
 
-    //make an array for extra cheese, boolean y/n
-    //comment: extra cheese prices: .30, .60. .90
+    public double getSpecialtyPrices() {
+        return specialtyPrices;
+    }
 
-    //make an array for regular toppings: lettuce, peppers, onions, tomatoes, jalapenos, cucumbers, pickles, guacamole, mushrooms
-    //comment: price: included
+    public void setSpecialtyPrices(double specialtyPrices) {
+        this.specialtyPrices = specialtyPrices;
+    }
 
-    //make an array for condiments: mayo, mustard, ketchup, ranch, thousand island, vinaigrette
-    //comment: price: included
+    public int getSizeOptions() {
+        return sizeOptions;
+    }
 
-    //note: ***if I have time, special requests will go here!***
+    public void setSizeOptions(int sizeOptions) {
+        this.sizeOptions = sizeOptions;
+    }
 
-    //make an array for sides: Au jus, condiments, boolean y/n
-    //comment: price: included
+    public String getBreadOptions() {
+        return breadOptions;
+    }
 
-    //make a loop that allows them to add another sandwich
+    public void setBreadOptions(String breadOptions) {
+        this.breadOptions = breadOptions;
+    }
 
-    //make an array for chips: original flavor, barbecue, sour cream and onion, flamin' hot, none
-    //comment: price: 1.50 for any flavor
+    public double getBreadPrices() {
+        return sizePrices;
+    }
 
-    //make an array for drink sizes: small, medium, large, none
-    //make an array for drinks: cola, root beer, lemon lime, orange, grape, diet cola, water, none
-    //comment: price: 2.00, 2.50, 3.00
+    public void setBreadPrices(double breadPrices) {
+        this.sizePrices = breadPrices;
+    }
 
-    // confirmation screen for the whole order, or a loop back to the main menu.
+    public String getMeatOptions() {
+        return meatOptions;
+    }
 
-    //note: extras if I have time: make an array for take out, delivery, or dine-in.
-    // random order number?
+    public void setMeatOptions(String meatOptions) {
+        this.meatOptions = meatOptions;
+    }
 
-    //collect payment
+    public double getMeatPrices() {
+        return meatPrices;
+    }
 
-    //TODO:
-    //print receipt
-    //if cancelled it directs you to the home screen
+    public void setMeatPrices(double meatPrices) {
+        this.meatPrices = meatPrices;
+    }
+
+    public String getExtraMeatOptionsLabel() {
+        return extraMeatOptionsLabel;
+    }
+
+    public void setExtraMeatOptionsLabel(String extraMeatOptionsLabel) {
+        this.extraMeatOptionsLabel = extraMeatOptionsLabel;
+    }
+
+    public String getCheeseOptions() {
+        return cheeseOptions;
+    }
+
+    public void setCheeseOptions(String cheeseOptions) {
+        this.cheeseOptions = cheeseOptions;
+    }
+
+    public double getExtraMeatPrices() {
+        return extraMeatPrices;
+    }
+
+    public void setExtraMeatPrices(double extraMeatPrices) {
+        this.extraMeatPrices = extraMeatPrices;
+    }
+
+    public double getCheesePrices() {
+        return cheesePrices;
+    }
+
+    public void setCheesePrices(double cheesePrices) {
+        this.cheesePrices = cheesePrices;
+    }
+
+    public double getExtraCheesePrices() {
+        return extraCheesePrices;
+    }
+
+    public void setExtraCheesePrices(double extraCheesePrices) {
+        this.extraCheesePrices = extraCheesePrices;
+    }
+
+    public String getExtraCheeseOptionsLabel() {
+        return extraCheeseOptionsLabel;
+    }
+
+    public void setExtraCheeseOptionsLabel(String extraCheeseOptionsLabel) {
+        this.extraCheeseOptionsLabel = extraCheeseOptionsLabel;
+    }
+
+    public String getToppingsOptions() {
+        return toppingsOptions;
+    }
+
+    public void setToppingsOptions(String toppingsOptions) {
+        this.toppingsOptions = toppingsOptions;
+    }
+
+    public double getToppingPrice() {
+        return toppingPrice;
+    }
+
+    public void setToppingPrice(double toppingPrice) {
+        this.toppingPrice = toppingPrice;
+    }
+
+    public String getCondimentOptions() {
+        return condimentOptions;
+    }
+
+    public void setCondimentOptions(String condimentOptions) {
+        this.condimentOptions = condimentOptions;
+    }
+
+    public double getCondimentPrices() {
+        return condimentPrices;
+    }
+
+    public void setCondimentPrices(double condimentPrices) {
+        this.condimentPrices = condimentPrices;
+    }
+
+    public String getSidesOptions() {
+        return sidesOptions;
+    }
+
+    public void setSidesOptions(String sidesOptions) {
+        this.sidesOptions = sidesOptions;
+    }
+
+    public double getSidesPrices() {
+        return sidesPrices;
+    }
+
+    public void setSidesPrices(double sidesPrices) {
+        this.sidesPrices = sidesPrices;
+    }
+
+    public String getChipsOptions() {
+        return chipsOptions;
+    }
+
+    public void setChipsOptions(String chipsOptions) {
+        this.chipsOptions = chipsOptions;
+    }
+
+    public double getChipsPrices() {
+        return chipsPrices;
+    }
+
+    public void setChipsPrices(double chipsPrices) {
+        this.chipsPrices = chipsPrices;
+    }
+
+    public String getDrinksSizes() {
+        return drinksSizes;
+    }
+
+    public void setDrinksSizes(String drinksSizes) {
+        this.drinksSizes = drinksSizes;
+    }
+
+    public String getDrinksOptions() {
+        return drinksOptions;
+    }
+
+    public void setDrinksOptions(String drinksOptions) {
+        this.drinksOptions = drinksOptions;
+    }
+
+    public double getDrinksPrices() {
+        return drinksPrices;
+    }
+
+    public void setDrinksPrices(double drinksPrices) {
+        this.drinksPrices = drinksPrices;
+    }
+
+    public String getSpecialRequests() {
+        return specialRequests;
+    }
+
+    public void setSpecialRequests(String specialRequests) {
+        this.specialRequests = specialRequests;
+    }
+
+    public String getApplyCoupon() {
+        return applyCoupon;
+    }
+
+    public void setApplyCoupon(String applyCoupon) {
+        this.applyCoupon = applyCoupon;
+    }
+
+    public String getDiningOptions() {
+        return diningOptions;
+    }
+
+    public void setDiningOptions(String diningOptions) {
+        this.diningOptions = diningOptions;
+    }
+
+    public boolean isToasted() {
+        return toasted;
+    }
+
+    public void setToasted(boolean toasted) {
+        this.toasted = toasted;
+    }
 }
