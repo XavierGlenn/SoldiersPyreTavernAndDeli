@@ -36,7 +36,7 @@ public class main {
         totalPrice = 0.0;
 
         while (true) {
-            System.out.println("\nHey you! We're in this together. Tell me what you need to fuel up.");
+            System.out.println("Hey you! Tell me what you need to fuel up.");
             System.out.println("1. Add Sandwich");
             System.out.println("2. Add Drink");
             System.out.println("3. Add Chips");
@@ -143,9 +143,10 @@ public class main {
     private static void addDrink() {
         System.out.println("Add A Drink to Cool Off Your Engine?");
         String[] drinkSizes = {"Small", "Medium", "Large"};
+        String[] drinkChoices = {"Cola", "Diet Cola", "Root Beer", "Lemon-Lime", "Orange", "Grape", }
         double[] drinkPrices = {2.00, 2.50, 3.00};
-        String size = chooseOption("Drink Size: ", drinkSizes, drinkPrices);
-        double price = getPrice(size, drinkSizes, drinkPrices);
+        String size = chooseOption("Drink Size: ", drinkSizes, drinkPrices, drinkChoices);
+        double price = getPrice(size, drinkSizes, drinkPrices, drinkChoices);
         receiptItems.add("Drink: " + size + " - $" + price);
         totalPrice += price;
         System.out.println("Added: " + size + " Drink ($" + price + ")"); }
@@ -160,7 +161,7 @@ public class main {
         System.out.println("Added: Chips - " + chips + " ($1.50)"); }
 
     private static void checkout() {
-        System.out.println("Let me take a look at what you've chosen and see what we have on this receipt: "); //TODO enter a fancy receipt name
+        System.out.println("Let me take a look at what you've chosen and see what we have on this receipt: ");
         for (String item : receiptItems) {
             System.out.println(item); }
 
@@ -185,6 +186,7 @@ public class main {
 
             writer.write(String.format("Total Price: $%.2f\n", totalPrice));
             writer.write("Soldier's Pyre Tavern and Deli: Eyes on victory, tummy on dinner.");
+            writer.write("~This is my happy place~");
             System.out.println("Receipt saved under: " + fileName);
         } catch (IOException e) {
             System.out.println("Failed to save receipt: " + e.getMessage()); }
@@ -212,5 +214,7 @@ public class main {
         return 0.0;
 
         //TODO: add payment collection somehow? another reader writer?
+        //TODO: Add the option to make another sandwich, and make it a loop
+        //TODO: Make the readme
     }
 }
