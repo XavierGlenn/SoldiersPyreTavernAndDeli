@@ -27,17 +27,14 @@ public class SandwichShopLogic {
     private String drinksSizes;
     private String drinksOptions;
     private double drinksPrices;
-    private String specialRequests;
-    private String applyCoupon;
-    private String diningOptions;
     boolean toasted;
 
     public SandwichShopLogic(double specialtyPrices, String specialtySandwiches, int sizeOptions, String breadOptions, double breadPrices, String meatOptions, double meatPrices, String extraMeatOptionsLabel, String cheeseOptions, double extraMeatPrices, double cheesePrices, String extraCheeseOptionsLabel, double extraCheesePrices, String toppingsOptions, double toppingPrice, String condimentOptions, double condimentPrices, double sidesPrices, String sidesOptions, String chipsOptions, double chipsPrices, String drinksSizes, String drinksOptions, double drinksPrices, String specialRequests, String applyCoupon, String diningOptions, boolean toasted) {
         this.specialtyPrices = specialtyPrices;
         this.specialtySandwiches = specialtySandwiches;
         this.sizeOptions = sizeOptions;
-        this.breadOptions = breadOptions;
         this.sizePrices = sizePrices;
+        this.breadOptions = breadOptions;
         this.meatOptions = meatOptions;
         this.meatPrices = meatPrices;
         this.extraMeatOptionsLabel = extraMeatOptionsLabel;
