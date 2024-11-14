@@ -7,6 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//TODO: MAKE EXTRA MEAT AND CHEESE MENUS WITH THEIR RESPECTIVE PRICING
+
 public class main {
     public static void Menu(String[] args) {MainMenu();}
 
@@ -72,69 +74,143 @@ public class main {
     private static void addSandwich() {
 
         //Size choice menu:
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
         System.out.println("Aye aye! You can count on me. What size sandwich would you like?");
         String[] sizeChoices = {"four", "eight", "twelve"};
         double[] sizePrices = {5.50, 7.00, 8.50};
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
         System.out.println("1.) 4 inch sandwich |$" + sizePrices[0]);
         System.out.println("2.) 8 inch sandwich |$" + sizePrices[1]);
         System.out.println("3.) 12 inch sandwich |$" + sizePrices[2]);
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
         int choice = scanner.nextInt();
-        double sandwichSizeChoice = sizePrices[choice -1];
+        double sandwichSizeChoice = sizePrices[choice - 1];
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here. And make a better menu. (int name = scanner.nextInt)
 
         //Bread choice menu:
+        String[] breadChoices = {"White Bread, Wheat Bread, Rye Bread, Tortilla Wrap"};
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
         System.out.println("Let's march! What flavor of bread would you like?");
-        System.out.println("1.) White Bread");
-        System.out.println("2.) Wheat Bread");
-        System.out.println("3.) Rye Bread");
-        System.out.println("4.) Tortilla Wrap");
-        String[] breadChoices = {"White", "Wheat", "Rye", "Wrap"};
-        choice = scanner.nextInt();
+        System.out.println("1.) White Bread " + breadChoices[0]);
+        System.out.println("2.) Wheat Bread " + breadChoices[1]);
+        System.out.println("3.) Rye Bread " + breadChoices[2]);
+        System.out.println("4.) Tortilla Wrap " + breadChoices[3]);
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        String sandwichBreadChoice = breadChoices[choice - 1];
+        scanner.nextInt();
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here. And make a better menu.
 
         //Meat choice menu:
-        System.out.println("Let's go! What meat would you like?");
         String[] meatChoices = {"Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon", "None"};
-        double[] meatPrices = {1.00, 2.00, 3.00, 3.50, 2.50, 1.75, 0.00};
+        double[] meatPrices = {1.00, 2.00, 3.00, 0.00};
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        System.out.println("Let's go! What meat would you like?");
+        System.out.println("1.) Steak |$" + meatChoices[0]);
+        System.out.println("2.) Ham |$" + meatChoices[1]);
+        System.out.println("3.) Salami |$" + meatChoices[2]);
+        System.out.println("4.) Roast Beef |$" + meatChoices[3]);
+        System.out.println("5.) Chicken |$" + meatChoices[4]);
+        System.out.println("6.) Bacon |$" + meatChoices[5]);
+        System.out.println("7.) None " + meatChoices[6]);
+        String sandwichMeatChoice = meatChoices[choice - 1];
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        scanner.nextInt();
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here. And make a better menu.
+
+        //Extra meat choice menu:
+        String[] extraMeatChoices = {"Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon", "None"};
+        double[] extraMeatPrices = {0.50, 1.00, 1.50, 0.00};
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        System.out.println("Hey-ho! Do you want any extra meats?");
+        System.out.println("1.) Steak |$" + extraMeatChoices[0]);
+        System.out.println("2.) Ham |$" + extraMeatChoices[1]);
+        System.out.println("3.) Salami |$" + extraMeatChoices[2]);
+        System.out.println("4.) Roast Beef |$" + extraMeatChoices[3]);
+        System.out.println("5.) Chicken |$" + extraMeatChoices[4]);
+        System.out.println("6.) Bacon |$" + extraMeatChoices[5]);
+        System.out.println("7.) None " + extraMeatChoices[6]);
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        String sandwichExtraMeatChoice = extraMeatChoices[choice - 1];
+        scanner.nextInt();
+        scanner.nextLine(); // scanner eater line
 
         //Cheese choice menu:
-        System.out.println("Got it. Now what cheese would you like?");
-        String[] cheeseOptions = {"American", "Provolone", "Cheddar", "Swiss", "None"};
+        String[] cheeseChoices = {"American", "Provolone", "Cheddar", "Swiss", "None"};
         double[] cheesePrices = {0.75, 1.50, 2.25, 1.75, 0.00};
-        choice = scanner.nextInt();
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        System.out.println("Got it. Now what cheese would you like?");
+        System.out.println("1.) American |$" + cheeseChoices[0]);
+        System.out.println("2.) Provolone |$" + cheeseChoices[1]);
+        System.out.println("3.) Cheddar |$" + cheeseChoices[2]);
+        System.out.println("4.) Swiss |$" + cheeseChoices[3]);
+        System.out.println("5.) None " + cheeseChoices[4]);
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        scanner.nextInt();
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here. And make a better menu.
+
+        //Extra cheese choice menu:
+        String[] extraCheeseChoices = {"American", "Provolone", "Cheddar", "Swiss", "None"};
+        double[] extraCheesePrices = {0.75, 1.50, 2.25, 1.75, 0.00};
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        System.out.println("Hup hup! Now what cheese would you like?");
+        System.out.println("1.) American |$" + extraCheeseChoices[0]);
+        System.out.println("2.) Provolone |$" + extraCheeseChoices[1]);
+        System.out.println("3.) Cheddar |$" + extraCheeseChoices[2]);
+        System.out.println("4.) Swiss |$" + extraCheeseChoices[3]);
+        System.out.println("5.) None " + extraCheeseChoices[4]);
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
+        scanner.nextInt();
+        scanner.nextLine(); // scanner eater line
 
         //Topping choice menu:
-        System.out.println("On it.What toppings are you hungry for? And surprise! All of these are free!");
-        String[] toppingOptions = {"Lettuce", "Peppers", "Onions", "Tomatoes", "Jalapenos", "Cucumbers", "Guacamole", "Mushrooms", "None"};
+        String[] toppingChoices = {"Lettuce", "Peppers", "Onions", "Tomatoes", "Jalapenos", "Cucumbers", "Guacamole", "Mushrooms", "None"};
         double[] toppingPrices = {0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00};
-        choice = scanner.nextInt();
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺");
+        System.out.println("On it. What toppings are you hungry for? And surprise! All of these are free!");
+        System.out.println("1.) Lettuce " + toppingChoices[0]);
+        System.out.println("2.) Peppers " + toppingChoices[1]);
+        System.out.println("3.) Onions " + toppingChoices[2]);
+        System.out.println("4.) Tomatoes " + toppingChoices[3]);
+        System.out.println("5.) Jalapenos " + toppingChoices[4]);
+        System.out.println("6.) Cucumbers " + toppingChoices[5]);
+        System.out.println("7.) Guacamole " + toppingChoices[6]);
+        System.out.println("8.) Mushrooms " + toppingChoices[7]);
+        System.out.println("9.) None " + toppingChoices[8]);
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺");
+        scanner.nextInt();
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here. And make a better menu.
 
         //Condiments choice menu:
-        System.out.println("Hang on. Did you want any condiments on that?");
-        String[] condimentOptions = {"Mayonnaise", "Mustard", "Ketchup", "Ranch", "Thousand Island", "Vinaigrette"};
         double[] condimentPrices = {0.00, 0.00, 0.00, 0.00, 0.00, 0.00};
+        String[] condimentChoices = {"Mayonnaise", "Mustard", "Ketchup", "Ranch", "Thousand Island", "Vinaigrette"};
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺");
+        System.out.println("Hang on. Did you want any condiments on that?");
+        System.out.println("1.) Mayonnaise " + condimentChoices[0]);
+        System.out.println("2.) Mustard " + condimentChoices[1]);
+        System.out.println("3.) Ketchup " + condimentChoices[2]);
+        System.out.println("4.) Ranch " + condimentChoices[3]);
+        System.out.println("5.) Thousand Island " + condimentChoices[4]);
+        System.out.println("6.) Vinaigrette " + toppingChoices[5]);
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺");
+        scanner.nextInt();
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here. And make a better menu.
 
         //Side choice menu:
-        System.out.println("Incoming! Now did you want anything else on the side? Don't worry, I won't leave you hanging. These are free too!");
         String[] sidesOptions = {"Au Jus, Special Sauce"};
         double[] sidesPrices = {0.00, 0.00};
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺");
+        System.out.println("Incoming! Now did you want anything else on the side? Don't worry, I won't leave you hanging. These are free too!");
+        System.out.println("1.) Au Jus");
+        System.out.println("2.) Special Sauce");
+        System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺");
+
+        scanner.nextInt();
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here and the eater code at the end. And make a better menu.
 
         // Choose size:
         String size = chooseOption("Size: ", sizeChoices, sizePrices);
         double sizePrice = getPrice(size, sizeChoices, sizePrices);
-        choice = scanner.nextInt();
+        scanner.nextInt();
 
         //Choose bread:
         String bread = ("Bread: ");
@@ -149,7 +225,7 @@ public class main {
         String extraMeat = chooseOption("Extra Meat: ", meatChoices, meatPrices);
         boolean extraMeatOptionsLabel = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine(); // scanner eater line
-        // TODO add a scanner in here
+        //fixme HOW TO BOOLEAN A SCANNER
 
         // Choose cheese:
         String cheese = chooseOption("Cheese: ", cheeseOptions, cheesePrices);
@@ -157,10 +233,10 @@ public class main {
 
         // Choose extra cheese option:
         System.out.print("Tactical! Would you like extra cheese for any extra hunger? (yes/no): ");
-        String extraCheese = chooseOption("Meats: ", meatChoices, meatPrices);
-        boolean extraCheeseOptionsLabel= scanner.nextLine().equalsIgnoreCase("yes");
+        String extraCheese = chooseOption("Extra Cheese: ", extraCheeseChoices, extraCheesePrices);
+        boolean extraCheeseOptionsLabel = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here
+        //fixme HOW TO BOOLEAN A SCANNER
 
         // Choose topping:
         String topping = chooseOption("Topping: ", toppingOptions, toppingPrices);
@@ -178,7 +254,7 @@ public class main {
         System.out.print("Steady now... Would you like your sandwich toasted? (yes/no): ");
         boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here
+        //fixme HOW TO BOOLEAN A SCANNER
 
         // Add to receipt:
         String sandwichDetails = size + "Size: " + bread + " Bread: " + toasted + "Toasted: " + meat + " Meat: " + extraMeat + "Extra Meat: " + cheese + " Cheese: " + extraCheese + "Extra Cheese: " + topping + "Topping: " + condiment + "Condiment: " + side + "Sides: ";
@@ -198,9 +274,10 @@ public class main {
         double price = getPrice(drinkSizeChoice, drinkChoices, drinkPrices);
         receiptItems.add("Drink: " + size + " - $" + price);
         totalPrice += price;
-        System.out.println("Added: " + size + " Drink ($" + price + ")"); }
-        scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here
+        System.out.println("Added: " + size + " Drink ($" + price + ")");
+        scanner.nextInt();
+        scanner.nextLine(); } // scanner eater line
+        //TODO add a scanner in here?
 
     private static void addChips() {
         System.out.println("Ready for more? How about some chips to go with your sandwich?");
@@ -209,9 +286,10 @@ public class main {
         String chips = chooseOption("Chips", chipOptions, null);
         receiptItems.add("Chips: " + chips + " - $" + chipPrice);
         totalPrice += chipPrice;
-        System.out.println("Added: Chips - " + chips + " ($1.50)"); }
-        scanner.nextLine(); // scanner eater line
-        //TODO add a scanner in here and
+        System.out.println("Added: Chips - " + chips + " ($1.50)");
+        scanner.nextInt();
+        scanner.nextLine(); } // scanner eater line
+        //TODO add a scanner in here?
 
     private static void checkout() {
         System.out.println("Let me take a look at what you've chosen and see what we have on this receipt: ");
