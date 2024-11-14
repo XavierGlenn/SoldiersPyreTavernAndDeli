@@ -54,9 +54,6 @@ public class SandwichShopLogic {
         this.drinksSizes = drinksSizes;
         this.drinksOptions = drinksOptions;
         this.drinksPrices = drinksPrices;
-        this.specialRequests = specialRequests;
-        this.applyCoupon = applyCoupon;
-        this.diningOptions = diningOptions;
         this.toasted = toasted;
     }
 
@@ -250,30 +247,6 @@ public class SandwichShopLogic {
 
     public void setDrinksPrices(double drinksPrices) {
         this.drinksPrices = drinksPrices;
-    }
-
-    public String getSpecialRequests() {
-        return specialRequests;
-    }
-
-    public void setSpecialRequests(String specialRequests) {
-        this.specialRequests = specialRequests;
-    }
-
-    public String getApplyCoupon() {
-        return applyCoupon;
-    }
-
-    public void setApplyCoupon(String applyCoupon) {
-        this.applyCoupon = applyCoupon;
-    }
-
-    public String getDiningOptions() {
-        return diningOptions;
-    }
-
-    public void setDiningOptions(String diningOptions) {
-        this.diningOptions = diningOptions;
     }
 
     public boolean isToasted() {
