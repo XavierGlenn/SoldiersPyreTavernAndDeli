@@ -58,202 +58,153 @@ public class SandwichShopLogic {
     }
 
     public String getSpecialtySandwiches() {
-        return specialtySandwiches;
-    }
+        return specialtySandwiches; }
 
     public void setSpecialtySandwiches(String specialtySandwiches) {
         this.specialtySandwiches = specialtySandwiches;
     }
 
     public double getSpecialtyPrices() {
-        return specialtyPrices;
-    }
+        return specialtyPrices; }
 
     public void setSpecialtyPrices(double specialtyPrices) {
-        this.specialtyPrices = specialtyPrices;
-    }
+        this.specialtyPrices = specialtyPrices; }
 
     public int getSizeOptions() {
-        return sizeOptions;
-    }
+        return sizeOptions; }
 
     public void setSizeOptions(int sizeOptions) {
-        this.sizeOptions = sizeOptions;
-    }
+        this.sizeOptions = sizeOptions; }
 
     public String getBreadOptions() {
-        return breadOptions;
-    }
+        return breadOptions; }
 
     public void setBreadOptions(String breadOptions) {
-        this.breadOptions = breadOptions;
-    }
+        this.breadOptions = breadOptions; }
 
     public double getBreadPrices() {
-        return sizePrices;
-    }
+        return sizePrices; }
 
     public void setBreadPrices(double breadPrices) {
-        this.sizePrices = breadPrices;
-    }
+        this.sizePrices = breadPrices; }
 
     public String getMeatOptions() {
-        return meatOptions;
-    }
+        return meatOptions; }
 
     public void setMeatOptions(String meatOptions) {
-        this.meatOptions = meatOptions;
-    }
+        this.meatOptions = meatOptions; }
 
     public double getMeatPrices() {
-        return meatPrices;
-    }
+        return meatPrices; }
 
     public void setMeatPrices(double meatPrices) {
-        this.meatPrices = meatPrices;
-    }
+        this.meatPrices = meatPrices; }
 
     public String getExtraMeatOptionsLabel() {
-        return extraMeatOptionsLabel;
-    }
+        return extraMeatOptionsLabel; }
 
     public void setExtraMeatOptionsLabel(String extraMeatOptionsLabel) {
-        this.extraMeatOptionsLabel = extraMeatOptionsLabel;
-    }
+        this.extraMeatOptionsLabel = extraMeatOptionsLabel; }
 
     public String getCheeseOptions() {
-        return cheeseOptions;
-    }
+        return cheeseOptions; }
 
     public void setCheeseOptions(String cheeseOptions) {
-        this.cheeseOptions = cheeseOptions;
-    }
+        this.cheeseOptions = cheeseOptions; }
 
     public double getExtraMeatPrices() {
-        return extraMeatPrices;
-    }
+        return extraMeatPrices; }
 
     public void setExtraMeatPrices(double extraMeatPrices) {
-        this.extraMeatPrices = extraMeatPrices;
-    }
+        this.extraMeatPrices = extraMeatPrices; }
 
     public double getCheesePrices() {
-        return cheesePrices;
-    }
+        return cheesePrices; }
 
     public void setCheesePrices(double cheesePrices) {
-        this.cheesePrices = cheesePrices;
-    }
+        this.cheesePrices = cheesePrices; }
 
     public double getExtraCheesePrices() {
-        return extraCheesePrices;
-    }
+        return extraCheesePrices; }
 
     public void setExtraCheesePrices(double extraCheesePrices) {
-        this.extraCheesePrices = extraCheesePrices;
-    }
+        this.extraCheesePrices = extraCheesePrices; }
 
     public String getExtraCheeseOptionsLabel() {
-        return extraCheeseOptionsLabel;
-    }
+        return extraCheeseOptionsLabel; }
 
     public void setExtraCheeseOptionsLabel(String extraCheeseOptionsLabel) {
-        this.extraCheeseOptionsLabel = extraCheeseOptionsLabel;
-    }
+        this.extraCheeseOptionsLabel = extraCheeseOptionsLabel; }
 
     public String getToppingsOptions() {
-        return toppingsOptions;
-    }
+        return toppingsOptions; }
 
     public void setToppingsOptions(String toppingsOptions) {
-        this.toppingsOptions = toppingsOptions;
-    }
+        this.toppingsOptions = toppingsOptions; }
 
     public double getToppingPrice() {
-        return toppingPrice;
-    }
+        return toppingPrice; }
 
     public void setToppingPrice(double toppingPrice) {
-        this.toppingPrice = toppingPrice;
-    }
+        this.toppingPrice = toppingPrice; }
 
     public String getCondimentOptions() {
-        return condimentOptions;
-    }
+        return condimentOptions; }
 
     public void setCondimentOptions(String condimentOptions) {
-        this.condimentOptions = condimentOptions;
-    }
+        this.condimentOptions = condimentOptions; }
 
     public double getCondimentPrices() {
-        return condimentPrices;
-    }
+        return condimentPrices; }
 
     public void setCondimentPrices(double condimentPrices) {
-        this.condimentPrices = condimentPrices;
-    }
+        this.condimentPrices = condimentPrices; }
 
     public String getSidesOptions() {
-        return sidesOptions;
-    }
+        return sidesOptions; }
 
     public void setSidesOptions(String sidesOptions) {
-        this.sidesOptions = sidesOptions;
-    }
+        this.sidesOptions = sidesOptions; }
 
     public double getSidesPrices() {
-        return sidesPrices;
-    }
+        return sidesPrices; }
 
     public void setSidesPrices(double sidesPrices) {
-        this.sidesPrices = sidesPrices;
-    }
+        this.sidesPrices = sidesPrices; }
 
     public String getChipsOptions() {
-        return chipsOptions;
-    }
+        return chipsOptions; }
 
     public void setChipsOptions(String chipsOptions) {
-        this.chipsOptions = chipsOptions;
-    }
+        this.chipsOptions = chipsOptions; }
 
     public double getChipsPrices() {
-        return chipsPrices;
-    }
+        return chipsPrices; }
 
     public void setChipsPrices(double chipsPrices) {
-        this.chipsPrices = chipsPrices;
-    }
+        this.chipsPrices = chipsPrices; }
 
     public String getDrinksSizes() {
-        return drinksSizes;
-    }
+        return drinksSizes; }
 
     public void setDrinksSizes(String drinksSizes) {
-        this.drinksSizes = drinksSizes;
-    }
+        this.drinksSizes = drinksSizes; }
 
     public String getDrinksOptions() {
-        return drinksOptions;
-    }
+        return drinksOptions; }
 
     public void setDrinksOptions(String drinksOptions) {
-        this.drinksOptions = drinksOptions;
-    }
+        this.drinksOptions = drinksOptions; }
 
     public double getDrinksPrices() {
-        return drinksPrices;
-    }
+        return drinksPrices; }
 
     public void setDrinksPrices(double drinksPrices) {
-        this.drinksPrices = drinksPrices;
-    }
+        this.drinksPrices = drinksPrices; }
 
     public boolean isToasted() {
-        return toasted;
-    }
+        return toasted; }
 
     public void setToasted(boolean toasted) {
-        this.toasted = toasted;
-    }
+        this.toasted = toasted; }
 }

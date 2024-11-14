@@ -25,7 +25,7 @@ public class main {
             if (choice == 1) {
                 startOrder(); }
             else if (choice == 0) {
-                System.out.println("Don't burn yourself. Be careful out there. ");
+                System.out.println("Don't burn yourself. Be careful out there, soldier.");
                 break; } else {
                 System.out.println("Heads up! That choice was invalid. Let me help. Sending you back to the menu..."); }
         }
@@ -36,7 +36,7 @@ public class main {
         totalPrice = 0.0;
 
         while (true) {
-            System.out.println("\nAye aye! We're in this together. Tell me what you need to fuel up");
+            System.out.println("\nHey you! We're in this together. Tell me what you need to fuel up.");
             System.out.println("1. Add Sandwich");
             System.out.println("2. Add Drink");
             System.out.println("3. Add Chips");
@@ -54,82 +54,104 @@ public class main {
                 case 4 -> {
                     checkout();
                     return; }
-
                 default -> System.out.println("Heads up! That choice was invalid. Let me help. Sending you back to the menu..."); }
         }
     }
 
     private static void addSandwich() {
-        System.out.println("\nLet's march! You can count on me. What bread would you like?");
+        //Size
+        System.out.println("Aye aye! You can count on me. What size sandwich would you like?");
+        int[] sizeChoices = {4, 8, 12};
+        double[] sizePrices = {5.50, 7.00, 8.50};
+
+        //Bread
+        System.out.println("Let's march! What flavor of bread would you like?");
         String[] breadChoices = {"White", "Wheat", "Rye", "Wrap"};
-        double[] breadPrices = {5.50, 7.00, 8.50};
+
+        //Meat
         System.out.println("Let's go! What meat would you like?");
         String[] meatChoices = {"Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon", "None"};
-        double[] meatPrices = {1.00, 2.00, 3.00, 3.50, 2.50, 1.75, 0.00}; //help how to do the extra meat
+        double[] meatPrices = {1.00, 2.00, 3.00, 3.50, 2.50, 1.75, 0.00}; //help how to do extra meat? can I make it loop? I forgot.
+
+        //Cheese
         System.out.println("Got it. Now what cheese would you like?");
         String[] cheeseOptions = {"American", "Provolone", "Cheddar", "Swiss", "None"};
-        double[] cheesePrices = {0.75, 1.50, 2.25, 1.75, 0.00}; //help how to do extra cheese
+        double[] cheesePrices = {0.75, 1.50, 2.25, 1.75, 0.00}; //help how to do extra cheese? can I make it loop? I forgot.
+
+        //Topping
         System.out.println("On it.What toppings are you hungry for? And surprise! All of these are free!");
         String[] toppingOptions = {"Lettuce", "Peppers", "Onions", "Tomatoes", "Jalapenos", "Cucumbers", "Guacamole", "Mushrooms", "None"};
         double[] toppingPrices = {0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00};
-        System.out.println("Hang on. Did you want any sauces with that?");
+
+        //Condiments
+        System.out.println("Hang on. Did you want any condiments on that?");
         String[] condimentOptions = {"Mayonnaise", "Mustard", "Ketchup", "Ranch", "Thousand Island", "Vinaigrette"};
         double[] condimentPrices = {0.00, 0.00, 0.00, 0.00, 0.00, 0.00};
+
+        //Side
         System.out.println("Incoming! Now did you want anything else on the side? Don't worry, I won't leave you hanging. These are free too!");
         String[] sidesOptions = {"Au Jus, Special Sauce"};
         double[] sidesPrices = {0.00, 0.00};
 
-        // Choose size
-        String size = chooseOption("Breads: ", breadChoices, breadPrices);
-        double sizePrice = getPrice(size, breadChoices, breadPrices);
+        // Choose size:
+        String size = chooseOption("Size: ", sizeChoices, sizePrices, breadChoices);
+        int sizePrice = getPrice(size, sizeChoices, breadChoices, sizePrices);
 
-        // Choose bread
-        String bread = chooseOption("Breads: ", breadChoices, breadPrices);
-        double breadPrice = getPrice(bread, breadChoices, breadPrices);
+        //Choose bread:
+        String bread = ("Bread: ");
 
-        // Choose meat
-        String meat = chooseOption("Meats: ", meatChoices, meatPrices);
+        // Choose meat:
+        String meat = chooseOption("Meat: ", meatChoices, meatPrices);
         double meatPrice = getPrice(meat, meatChoices, meatPrices);
 
-        // Extra meat option
+        // Choose extra meat option:
         System.out.print("Hup hup! Would you like extra meat for any extra hunger? (yes/no): ");
+        String extraMeat = chooseOption("Extra Meat: ", meatChoices, meatPrices);
         boolean extraMeatOptionsLabel = scanner.nextLine().equalsIgnoreCase("yes");
 
-        // Choose cheese
-        String cheese = chooseOption("Cheeses: ", cheeseOptions, cheesePrices);
+        // Choose cheese:
+        String cheese = chooseOption("Cheese: ", cheeseOptions, cheesePrices);
         double cheesePrice = getPrice(cheese, cheeseOptions, cheesePrices);
 
-        // Extra cheese option
+        // Choose extra cheese option:
         System.out.print("Tactical! Would you like extra cheese for any extra hunger? (yes/no): ");
+        String extraCheese = chooseOption("Meats: ", meatChoices, meatPrices);
         boolean extraCheeseOptionsLabel= scanner.nextLine().equalsIgnoreCase("yes");
 
-        // Choose toppings
-        String topping = chooseOption("Cheeses: ", toppingOptions, toppingPrices);
+        // Choose topping:
+        String topping = chooseOption("Topping: ", toppingOptions, toppingPrices);
         double toppingPrice = getPrice(topping, toppingOptions, toppingPrices);
 
-        // Toasted option
-        System.out.print("Steady now soldier... Would you like your sandwich toasted? (yes/no): ");
+        // Choose condiment:
+        String condiment = chooseOption("Condiment: ", condimentOptions, condimentPrices);
+        double condimentPrice = getPrice(condiment, condimentOptions, condimentPrices);
+
+        // Choose side:
+        String side = chooseOption("Side: ", sidesOptions, sidesPrices);
+        double sidesPrice = getPrice(side, sidesOptions, sidesPrices);
+
+        // Toasted option:
+        System.out.print("Steady now... Would you like your sandwich toasted? (yes/no): ");
         boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
 
-        // Add to receipt
-        String sandwichDetails = bread + " Bread: " + meat + " Meat: " + cheese + " Cheese: "
-                + (toasted ? ", Toasted" : "");
+        // Add to receipt:
+        String sandwichDetails = size + "Size: " + bread + " Bread: " + toasted + "Toasted: " + meat + " Meat: " + extraMeat + "Extra Meat: " + cheese + " Cheese: " + extraCheese + "Extra Cheese: " + topping + "Topping: " + condiment + "Condiment: " + side + "Sides: ";
         receiptItems.add("Sandwich: " + sandwichDetails);
-        totalPrice += breadPrice + meatPrice + cheesePrice;
+        totalPrice += sizePrice + meatPrice + cheesePrice;
         System.out.println("Added: " + sandwichDetails + " ($" + totalPrice + ")"); }
 
     private static void addDrink() {
-        System.out.println("\n=Add A Drink to Cool Off Your Engine?");
+        System.out.println("Add A Drink to Cool Off Your Engine?");
         String[] drinkSizes = {"Small", "Medium", "Large"};
         double[] drinkPrices = {2.00, 2.50, 3.00};
-        String size = chooseOption("Drink Size", drinkSizes, drinkPrices);
+        String size = chooseOption("Drink Size: ", drinkSizes, drinkPrices);
         double price = getPrice(size, drinkSizes, drinkPrices);
         receiptItems.add("Drink: " + size + " - $" + price);
         totalPrice += price;
         System.out.println("Added: " + size + " Drink ($" + price + ")"); }
 
     private static void addChips() {
-        System.out.println("\nReady for more? How about some chips?");
+        System.out.println("Ready for more? How about some chips to go with your sandwich?");
         String[] chipOptions = {"Original", "Barbecue", "Sour Cream and Onion", "Flamin' Hot"};
         double chipPrice = 1.50;
         String chips = chooseOption("Chips", chipOptions, null);
@@ -138,7 +160,7 @@ public class main {
         System.out.println("Added: Chips - " + chips + " ($1.50)"); }
 
     private static void checkout() {
-        System.out.println("\nYour receipt: ");
+        System.out.println("Let me take a look at what you've chosen and see what we have on this receipt: "); //TODO enter a fancy receipt name
         for (String item : receiptItems) {
             System.out.println(item); }
 
@@ -146,27 +168,29 @@ public class main {
         System.out.print("Done? (yes/no): ");
         if (scanner.nextLine().equalsIgnoreCase("yes")) {
             saveReceipt();
-            System.out.println("All better now. Well done."); }
+            System.out.println("All better now. Well done. I'll be on my way with your food soon!"); }
         else {
             System.out.println("Order canceled."); }
     }
 
+    //Receipt logic stuff:
     private static void saveReceipt() {
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss"));
-        String fileName = "receipts/" + timestamp + ".txt";
+        String fileName = "soldiers-pyre-receipts/" + timestamp + ".txt";
 
         try (FileWriter writer = new FileWriter(fileName)) {
-            writer.write("=== DELI-cious Receipt ===\n");
+            writer.write("Let me take a look at what you've chosen and see what we have on this receipt: ");
             for (String item : receiptItems) {
                 writer.write(item + "\n"); }
 
             writer.write(String.format("Total Price: $%.2f\n", totalPrice));
-            System.out.println("Receipt saved as: " + fileName);
+            writer.write("Soldier's Pyre Tavern and Deli: Eyes on victory, tummy on dinner.");
+            System.out.println("Receipt saved under: " + fileName);
         } catch (IOException e) {
             System.out.println("Failed to save receipt: " + e.getMessage()); }
     }
 
-    //math functions here:
+    //math functions here that hurt my brain but they're needed:
     private static String chooseOption(String category, String[] options, double[] prices) {
         System.out.println("Choose " + category + ":");
         for (int i = 0; i < options.length; i++) {
@@ -177,7 +201,7 @@ public class main {
 
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); //to make sure the scanner doesn't eat anything
         return options[choice - 1]; }
 
     private static double getPrice(String item, String[] options, double[] prices) {
@@ -186,5 +210,7 @@ public class main {
                 return prices != null ? prices[i] : 0.0; }
         }
         return 0.0;
+
+        //TODO: add payment collection somehow? another reader writer?
     }
 }
