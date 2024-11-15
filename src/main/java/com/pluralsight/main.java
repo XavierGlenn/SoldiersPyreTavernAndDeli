@@ -1,5 +1,3 @@
-package com.pluralsight;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -7,10 +5,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//TODO: MAKE EXTRA MEAT AND CHEESE MENUS WITH THEIR RESPECTIVE PRICING
+    public static void main() {
 
-public class main {
-    public static void Menu(String[] args) {MainMenu();}
+        MainMenu(); scanner.close(); }
 
     private static final Scanner scanner = new Scanner(System.in);
     private static final ArrayList<String> receiptItems = new ArrayList<>();
@@ -24,7 +21,6 @@ public class main {
             System.out.println("0. Exit the Menu.");
             System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖");
             System.out.print("Count on me. I can put you to rights. Enter your choice here: ");
-
             int choice = scanner.nextInt();
             scanner.nextLine(); // scanner eater line
 
@@ -83,12 +79,11 @@ public class main {
         System.out.println("2.) 8 inch sandwich |$" + sizePrices[1]);
         System.out.println("3.) 12 inch sandwich |$" + sizePrices[2]);
         System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
-        int choice = scanner.nextInt();
-        double sandwichSizeChoice = sizePrices[choice - 1];
+        scanner.nextInt();
         scanner.nextLine(); // scanner eater line
 
         //Bread choice menu:
-        String[] breadChoices = {"White Bread, Wheat Bread, Rye Bread, Tortilla Wrap"};
+        String[] breadChoices = {"White Bread", "Wheat Bread", "Rye Bread", "Tortilla Wrap"};
         System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
         System.out.println("Let's march! What flavor of bread would you like?");
         System.out.println("1.) White Bread " + breadChoices[0]);
@@ -96,7 +91,6 @@ public class main {
         System.out.println("3.) Rye Bread " + breadChoices[2]);
         System.out.println("4.) Tortilla Wrap " + breadChoices[3]);
         System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
-        String sandwichBreadChoice = breadChoices[choice - 1];
         scanner.nextInt();
         scanner.nextLine(); // scanner eater line
 
@@ -112,7 +106,6 @@ public class main {
         System.out.println("5.) Chicken |$" + meatChoices[4]);
         System.out.println("6.) Bacon |$" + meatChoices[5]);
         System.out.println("7.) None " + meatChoices[6]);
-        String sandwichMeatChoice = meatChoices[choice - 1];
         System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
         scanner.nextInt();
         scanner.nextLine(); // scanner eater line
@@ -130,7 +123,6 @@ public class main {
         System.out.println("6.) Bacon |$" + extraMeatChoices[5]);
         System.out.println("7.) None " + extraMeatChoices[6]);
         System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
-        String sandwichExtraMeatChoice = extraMeatChoices[choice - 1];
         scanner.nextInt();
         scanner.nextLine(); // scanner eater line
 
@@ -214,7 +206,6 @@ public class main {
 
         //Choose bread:
         String bread = ("Bread: ");
-        String[] breadChoice = {"White, Wheat, Rye, Wrap"};
 
         // Choose meat:
         String meat = chooseOption("Meat: ", meatChoices, meatPrices);
@@ -223,38 +214,30 @@ public class main {
         // Choose extra meat option:
         System.out.print("Hup hup! Would you like extra meat for any extra hunger? (yes/no): ");
         String extraMeat = chooseOption("Extra Meat: ", meatChoices, meatPrices);
-        boolean extraMeatOptionsLabel = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine(); // scanner eater line
-        //fixme HOW TO BOOLEAN A SCANNER
 
         // Choose cheese:
-        String cheese = chooseOption("Cheese: ", cheeseOptions, cheesePrices);
-        double cheesePrice = getPrice(cheese, cheeseOptions, cheesePrices);
+        String cheese = chooseOption("Cheese: ", cheeseChoices, cheesePrices);
+        double cheesePrice = getPrice(cheese, cheeseChoices, cheesePrices);
 
         // Choose extra cheese option:
         System.out.print("Tactical! Would you like extra cheese for any extra hunger? (yes/no): ");
         String extraCheese = chooseOption("Extra Cheese: ", extraCheeseChoices, extraCheesePrices);
-        boolean extraCheeseOptionsLabel = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine(); // scanner eater line
-        //fixme HOW TO BOOLEAN A SCANNER
 
         // Choose topping:
-        String topping = chooseOption("Topping: ", toppingOptions, toppingPrices);
-        double toppingPrice = getPrice(topping, toppingOptions, toppingPrices);
+        String topping = chooseOption("Topping: ", toppingChoices, toppingPrices);
 
         // Choose condiment:
-        String condiment = chooseOption("Condiment: ", condimentOptions, condimentPrices);
-        double condimentPrice = getPrice(condiment, condimentOptions, condimentPrices);
+        String condiment = chooseOption("Condiment: ", condimentChoices, condimentPrices);
 
         // Choose side:
         String side = chooseOption("Side: ", sidesOptions, sidesPrices);
-        double sidesPrice = getPrice(side, sidesOptions, sidesPrices);
 
         // Toasted option:
         System.out.print("Steady now... Would you like your sandwich toasted? (yes/no): ");
         boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine(); // scanner eater line
-        //fixme HOW TO BOOLEAN A SCANNER
 
         // Add to receipt:
         String sandwichDetails = size + "Size: " + bread + " Bread: " + toasted + "Toasted: " + meat + " Meat: " + extraMeat + "Extra Meat: " + cheese + " Cheese: " + extraCheese + "Extra Cheese: " + topping + "Topping: " + condiment + "Condiment: " + side + "Sides: ";
@@ -277,11 +260,10 @@ public class main {
         System.out.println("Added: " + size + " Drink ($" + price + ")");
         scanner.nextInt();
         scanner.nextLine(); } // scanner eater line
-        //TODO add a scanner in here?
 
     private static void addChips() {
         System.out.println("Ready for more? How about some chips to go with your sandwich?");
-        String[] chipOptions = {"Original", "Barbecue", "Sour Cream and Onion", "Flamin' Hot"};
+        String[] chipOptions = {"Original", "Barbecue", "Sour Cream and Onion", "Flaming Hot"};
         double chipPrice = 1.50;
         String chips = chooseOption("Chips", chipOptions, null);
         receiptItems.add("Chips: " + chips + " - $" + chipPrice);
@@ -289,7 +271,6 @@ public class main {
         System.out.println("Added: Chips - " + chips + " ($1.50)");
         scanner.nextInt();
         scanner.nextLine(); } // scanner eater line
-        //TODO add a scanner in here?
 
     private static void checkout() {
         System.out.println("Let me take a look at what you've chosen and see what we have on this receipt: ");
@@ -342,8 +323,8 @@ public class main {
     private static double getPrice(String item, String[] options, double[] prices) {
         for (int i = 0; i < options.length; i++) {
             if (options[i].equalsIgnoreCase(item)) {
-                return prices != null ? prices[i] : 0.0; }
+                return prices != null ? prices[i] : 0.0;
+            }
         }
         return 0.0;
     }
-}
