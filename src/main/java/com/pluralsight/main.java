@@ -28,8 +28,6 @@ import java.util.Scanner;
                 startOrder(); }
             else if (choice == 0) {
                 System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
-                System.out.println("Don't burn yourself. Be careful out there, soldier.");
-                System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
                 break; } else {
                 System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
                 System.out.println("Heads up! That choice was invalid. Let me help. Sending you back to the menu..."); }
@@ -74,6 +72,7 @@ import java.util.Scanner;
         System.out.println("Aye aye! You can count on me. What size sandwich would you like?");
         String[] sizeChoices = {"four", "eight", "twelve"};
         double[] sizePrices = {5.50, 7.00, 8.50};
+        double[] meatQuantity = {1.00, 2.00, 3.00};
         System.out.println("˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊˚-˚₊‧⁺˖˖⁺‧₊");
         System.out.println("1.) 4 inch sandwich |$" + sizePrices[0]);
         System.out.println("2.) 8 inch sandwich |$" + sizePrices[1]);
@@ -247,9 +246,8 @@ import java.util.Scanner;
 
     private static void addDrink() {
         System.out.println("Add A Drink to Cool Off Your Engine?");
-        System.out.println("Small Drink = 1, Medium Drink = 2, Large Drink = 3");
+        String[] drinkSize = {"1.) Small", "2.) Medium", "3.) Large"};
         int choice = scanner.nextInt();
-        String[] drinkSize = {"Small", "Medium", "Large"};
         String drinkSizeChoice = drinkSize [choice -1];
         String[] drinkChoices = {"Cola", "Diet Cola", "Root Beer", "Lemon-Lime", "Orange", "Grape"};
         double[] drinkPrices = {2.00, 2.50, 3.00};
